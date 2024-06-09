@@ -28,18 +28,16 @@ const images = [
 
 
 
-// Отримуємо батьківський елемент галереї
 const gallery = document.querySelector('.gallery');
 
-// Створюємо фрагмент для зберігання створених елементів
 const fragment = document.createDocumentFragment();
 
-// Проходимося по кожному об'єкту у масиві images
+
 images.forEach(image => {
-  // Створюємо елемент <li>
+  
   const listItem = document.createElement('li');
   
-  // Створюємо елемент <img>
+ 
   const img = document.createElement('img');
   img.src = image.url;
   img.alt = image.alt;
@@ -47,12 +45,12 @@ images.forEach(image => {
   img.style.height = '300px';
   img.style.margin = '16px';
   img.style.listStyle = 'none';
-  // Додаємо <img> в <li>
+  
   listItem.appendChild(img);
   
-  // Додаємо <li> в фрагмент
+  
   fragment.appendChild(listItem);
 });
 
-// Додаємо фрагмент з усіма <li> в галерею за одну операцію
+
 gallery.appendChild(fragment);
